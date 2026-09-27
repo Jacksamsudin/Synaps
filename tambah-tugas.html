@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Tugas - Synaps</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Synaps</h1>
+        <p>Aplikasi Manajemen Tugas dan Catatan</p>
+
+        <nav>
+            <a href="index.html">Dashboard</a> |
+            <a href="tambah-tugas.html">Tambah Tugas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <article>
+            <h2>Tambah Tugas</h2>
+
+            <p>
+                Isi formulir berikut untuk menambahkan tugas baru
+                ke dalam daftar tugas Synaps.
+            </p>
+
+            <form action="#" method="post">
+
+                <section>
+                    <h3>Informasi Tugas</h3>
+
+                    <p>
+                        <label for="judul">Judul Tugas</label><br>
+                        <input
+                            type="text"
+                            id="judul"
+                            name="judul"
+                            placeholder="Contoh: Membuat Website HTML"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="deskripsi">Deskripsi Tugas</label><br>
+                        <textarea
+                            id="deskripsi"
+                            name="deskripsi"
+                            rows="5"
+                            cols="40"
+                            placeholder="Tuliskan deskripsi tugas..."
+                        ></textarea>
+                    </p>
+
+                    <p>
+                        <label for="matakuliah">Mata Kuliah</label><br>
+                        <select id="matakuliah" name="matakuliah" required>
+                            <option value="">-- Pilih Mata Kuliah --</option>
+                            <option value="pemrograman-web">
+                                Pemrograman Web
+                            </option>
+                            <option value="kpl">
+                                Konstruksi Perangkat Lunak
+                            </option>
+                            <option value="ai">
+                                Artificial Intelligence
+                            </option>
+                            <option value="struktur-data">
+                                Struktur Data
+                            </option>
+                            <option value="basis-data">
+                                Basis Data
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="deadline">Deadline</label><br>
+                        <input
+                            type="date"
+                            id="deadline"
+                            name="deadline"
+                            required
+                        >
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Prioritas Tugas</h3>
+
+                    <p>
+                        Pilih tingkat prioritas tugas:
+                    </p>
+
+                    <p>
+                        <input
+                            type="radio"
+                            id="prioritas-rendah"
+                            name="prioritas"
+                            value="rendah"
+                        >
+                        <label for="prioritas-rendah">Rendah</label>
+                    </p>
+
+                    <p>
+                        <input
+                            type="radio"
+                            id="prioritas-sedang"
+                            name="prioritas"
+                            value="sedang"
+                            checked
+                        >
+                        <label for="prioritas-sedang">Sedang</label>
+                    </p>
+
+                    <p>
+                        <input
+                            type="radio"
+                            id="prioritas-tinggi"
+                            name="prioritas"
+                            value="tinggi"
+                        >
+                        <label for="prioritas-tinggi">Tinggi</label>
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Status Tugas</h3>
+
+                    <p>
+                        <label for="status">Status</label><br>
+                        <select id="status" name="status">
+                            <option value="belum-selesai">
+                                Belum Selesai
+                            </option>
+                            <option value="sedang-dikerjakan">
+                                Sedang Dikerjakan
+                            </option>
+                            <option value="selesai">
+                                Selesai
+                            </option>
+                        </select>
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Aksi</h3>
+
+                    <button type="submit">
+                        Simpan Tugas
+                    </button>
+
+                    <button type="reset">
+                        Reset
+                    </button>
+                </section>
+
+            </form>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>I Kadek Tegar Suanda - 103022400074</p>
+    </footer>
+
+</body>
+</html>
