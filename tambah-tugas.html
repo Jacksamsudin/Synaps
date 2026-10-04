@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,24 +37,13 @@
 
                     <p>
                         <label for="judul">Judul Tugas</label><br>
-                        <input
-                            type="text"
-                            id="judul"
-                            name="judul"
-                            placeholder="Contoh: Membuat Website HTML"
-                            required
-                        >
+                        <input type="text" id="judul" name="judul" placeholder="Contoh: Membuat Website HTML" required>
                     </p>
 
                     <p>
                         <label for="deskripsi">Deskripsi Tugas</label><br>
-                        <textarea
-                            id="deskripsi"
-                            name="deskripsi"
-                            rows="5"
-                            cols="40"
-                            placeholder="Tuliskan deskripsi tugas..."
-                        ></textarea>
+                        <textarea id="deskripsi" name="deskripsi" rows="5" cols="40"
+                            placeholder="Tuliskan deskripsi tugas..."></textarea>
                     </p>
 
                     <p>
@@ -80,12 +70,7 @@
 
                     <p>
                         <label for="deadline">Deadline</label><br>
-                        <input
-                            type="date"
-                            id="deadline"
-                            name="deadline"
-                            required
-                        >
+                        <input type="date" id="deadline" name="deadline" required>
                     </p>
                 </section>
 
@@ -97,33 +82,17 @@
                     </p>
 
                     <p>
-                        <input
-                            type="radio"
-                            id="prioritas-rendah"
-                            name="prioritas"
-                            value="rendah"
-                        >
+                        <input type="radio" id="prioritas-rendah" name="prioritas" value="rendah">
                         <label for="prioritas-rendah">Rendah</label>
                     </p>
 
                     <p>
-                        <input
-                            type="radio"
-                            id="prioritas-sedang"
-                            name="prioritas"
-                            value="sedang"
-                            checked
-                        >
+                        <input type="radio" id="prioritas-sedang" name="prioritas" value="sedang" checked>
                         <label for="prioritas-sedang">Sedang</label>
                     </p>
 
                     <p>
-                        <input
-                            type="radio"
-                            id="prioritas-tinggi"
-                            name="prioritas"
-                            value="tinggi"
-                        >
+                        <input type="radio" id="prioritas-tinggi" name="prioritas" value="tinggi">
                         <label for="prioritas-tinggi">Tinggi</label>
                     </p>
                 </section>
@@ -150,13 +119,15 @@
                 <section>
                     <h3>Aksi</h3>
 
-                    <button type="submit">
-                        Simpan Tugas
-                    </button>
+                    <div class="form-actions">
+                        <button type="submit">
+                            Simpan Tugas
+                        </button>
 
-                    <button type="reset">
-                        Reset
-                    </button>
+                        <button type="reset">
+                            Reset
+                        </button>
+                    </div>
                 </section>
 
             </form>
@@ -169,4 +140,5 @@
     </footer>
 
 </body>
+
 </html>
