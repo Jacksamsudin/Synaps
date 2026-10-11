@@ -6,109 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Detail Tugas - Synaps</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
-        <h1>Synaps</h1>
-        <p>Aplikasi manajemen tugas dan aktivitas perkuliahan.</p>
-
-        <nav>
-            <h2>Navigasi</h2>
-            <a href="index.html">Dashboard</a> |
-            <a href="tambah-tugas.html">Tambah Tugas</a> |
-            <a href="detail-tugas.html">Detail Tugas</a>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark synaps-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">Synaps</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="index.html">Dashboard</a>
+          <a class="nav-link active" aria-current="page" href="detail-tugas.html">Daftar Tugas</a>
+          <a class="nav-link" href="tambah-tugas.html">Tambah Tugas</a>
+        </div>
+      </div>
+    </div>
+  </nav>
     </header>
 
-    <main>
+    <main class="container py-4 py-md-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+      <div><p class="text-uppercase small fw-semibold text-secondary mb-1">Manajemen</p><h1 class="fw-bold mb-2">Daftar Tugas</h1><p class="text-secondary mb-0">Lihat tugas kuliah, deadline, prioritas, dan statusnya.</p></div>
+      <a class="btn btn-synaps" href="tambah-tugas.html">+ Tambah Tugas</a>
+    </div>
 
-        <article>
-            <header>
-                <h2>Detail Tugas</h2>
-                <p>Informasi lengkap mengenai tugas yang sedang dikerjakan.</p>
-            </header>
+    <section class="card shadow-sm border-0">
+      <div class="card-body p-3 p-md-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <caption class="text-secondary">Daftar contoh tugas perkuliahan</caption>
+            <thead class="table-light"><tr><th scope="col">No.</th><th scope="col">Judul Tugas</th><th scope="col">Mata Kuliah</th><th scope="col">Deadline</th><th scope="col">Prioritas</th><th scope="col">Status</th><th scope="col">Aksi</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1</th><td class="fw-semibold">Tugas 2 HTML</td><td>Pemrograman Web</td><td>30 September 2026</td><td><span class="badge text-bg-danger">Tinggi</span></td><td><span class="badge text-bg-warning">Belum Selesai</span></td><td><a href="#tugas-html">Lihat</a></td></tr>
+              <tr><th scope="row">2</th><td class="fw-semibold">Implementasi KNN</td><td>Artificial Intelligence</td><td>2 Oktober 2026</td><td><span class="badge text-bg-primary">Sedang</span></td><td><span class="badge text-bg-warning">Belum Selesai</span></td><td><a href="#tugas-knn">Lihat</a></td></tr>
+              <tr><th scope="row">3</th><td class="fw-semibold">Analisis Struktur Data</td><td>Struktur Data</td><td>5 Oktober 2026</td><td><span class="badge text-bg-secondary">Rendah</span></td><td><span class="badge text-bg-success">Selesai</span></td><td><a href="#tugas-struktur">Lihat</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-            <section>
-                <h3>Judul Tugas</h3>
-                <p>Pembuatan Struktur HTML</p>
-            </section>
-
-            <section>
-                <h3>Deskripsi</h3>
-                <p>
-                    Membuat struktur halaman website menggunakan HTML murni
-                    dengan menerapkan semantic HTML5 dan aksesibilitas dasar.
-                </p>
-            </section>
-
-            <section>
-                <h3>Informasi Tugas</h3>
-
-                <p>
-                    <strong>Mata Kuliah:</strong>
-                    Pemrograman Web
-                </p>
-
-                <p>
-                    <strong>Deadline:</strong>
-                    30 September 2026
-                </p>
-
-                <p>
-                    <strong>Prioritas:</strong>
-                    Tinggi
-                </p>
-
-                <p>
-                    <strong>Status:</strong>
-                    Belum Selesai
-                </p>
-            </section>
-
-            <section>
-                <h3>Gambar Tugas</h3>
-
-                <img 
-                    src="https://via.placeholder.com/400x200"
-                    alt="Gambar ilustrasi tugas Pemrograman Web"
-                >
-
-                <p>
-                    Gambar di atas merupakan ilustrasi dari tugas
-                    Pemrograman Web yang sedang dikerjakan.
-                </p>
-            </section>
-
-            <section>
-                <h3>Catatan</h3>
-
-                <p>
-                    Pastikan struktur HTML menggunakan elemen semantic
-                    seperti header, nav, main, article, dan footer.
-                </p>
-            </section>
-
-            <section>
-                <h3>Aksi</h3>
-
-                <p>
-                    <a href="tambah-tugas.html">Edit Tugas</a>
-                </p>
-
-                <p>
-                    <a href="index.html">Kembali ke Dashboard</a>
-                </p>
-            </section>
-
-        </article>
-
-    </main>
-
-    <footer>
-        <p>I Kadek Tegar Suanda - 103022400074</p>
-    </footer>
+    <section class="row g-3 mt-2" id="tugas-html">
+      <div class="col-12 col-lg-4"><article class="card h-100 border-0 shadow-sm"><div class="card-body"><h2 class="h5 fw-bold">Tugas 2 HTML</h2><p class="text-secondary small">Pemrograman Web</p><p>Membuat struktur halaman menggunakan semantic HTML5.</p><p class="mb-1"><strong>Deadline:</strong> 30 September 2026</p><p class="mb-3"><strong>Status:</strong> Belum Selesai</p><a href="tambah-tugas.html" class="btn btn-outline-dark btn-sm">Edit data contoh</a></div></article></div>
+      <div class="col-12 col-lg-4" id="tugas-knn"><article class="card h-100 border-0 shadow-sm"><div class="card-body"><h2 class="h5 fw-bold">Implementasi KNN</h2><p class="text-secondary small">Artificial Intelligence</p><p>Mengimplementasikan algoritma KNN untuk klasifikasi data.</p><p class="mb-1"><strong>Deadline:</strong> 2 Oktober 2026</p><p class="mb-3"><strong>Status:</strong> Belum Selesai</p><a href="tambah-tugas.html" class="btn btn-outline-dark btn-sm">Edit data contoh</a></div></article></div>
+      <div class="col-12 col-lg-4" id="tugas-struktur"><article class="card h-100 border-0 shadow-sm"><div class="card-body"><h2 class="h5 fw-bold">Analisis Struktur Data</h2><p class="text-secondary small">Struktur Data</p><p>Menganalisis konsep struktur data dan penerapannya.</p><p class="mb-1"><strong>Deadline:</strong> 5 Oktober 2026</p><p class="mb-3"><strong>Status:</strong> Selesai</p><a href="tambah-tugas.html" class="btn btn-outline-dark btn-sm">Edit data contoh</a></div></article></div>
+    </section>
+  </main>
+    <footer class="py-4 text-center"><p class="mb-0">I Kadek Tegar Suanda - 103022400074</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
