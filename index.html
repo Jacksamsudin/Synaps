@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Synaps - Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 
 </head>
 
@@ -46,7 +46,7 @@
                 <div class="card summary-card h-100">
                     <div class="card-body">
                         <p class="text-secondary mb-2">Total Tugas</p>
-                        <p class="display-6 fw-bold mb-0">12</p>
+                        <p class="display-6 fw-bold mb-0" id="totalTasks">0</p>
                         <small class="text-secondary">Semua tugas perkuliahan</small>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="card summary-card h-100">
                     <div class="card-body">
                         <p class="text-secondary mb-2">Belum Selesai</p>
-                        <p class="display-6 fw-bold mb-0 text-danger">5</p>
+                        <p class="display-6 fw-bold mb-0 text-danger" id="pendingTasks">0</p>
                         <small class="text-secondary">Perlu segera dikerjakan</small>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="card summary-card h-100">
                     <div class="card-body">
                         <p class="text-secondary mb-2">Tugas Selesai</p>
-                        <p class="display-6 fw-bold mb-0 text-success">7</p>
+                        <p class="display-6 fw-bold mb-0 text-success" id="completedTasks">0</p>    
                         <small class="text-secondary">Tetap pertahankan!</small>
                     </div>
                 </div>
@@ -92,31 +92,7 @@
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="fw-semibold">Tugas 2 HTML</td>
-                                <td>Pemrograman Web</td>
-                                <td>30 Sep 2026</td>
-                                <td><span class="badge text-bg-danger">Tinggi</span></td>
-                                <td><span class="badge text-bg-warning">Belum Selesai</span></td>
-                                <td><a href="detail-tugas.html">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold">Implementasi KNN</td>
-                                <td>Artificial Intelligence</td>
-                                <td>2 Okt 2026</td>
-                                <td><span class="badge text-bg-primary">Sedang</span></td>
-                                <td><span class="badge text-bg-warning">Belum Selesai</span></td>
-                                <td><a href="detail-tugas.html">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold">Analisis Struktur Data</td>
-                                <td>Struktur Data</td>
-                                <td>5 Okt 2026</td>
-                                <td><span class="badge text-bg-secondary">Rendah</span></td>
-                                <td><span class="badge text-bg-success">Selesai</span></td>
-                                <td><a href="detail-tugas.html">Detail</a></td>
-                            </tr>
+                        <tbody id="dashboardTaskList">
                         </tbody>
                     </table>
                 </div>
@@ -139,6 +115,10 @@
         <p class="mb-0">I Kadek Tegar Suanda - 103022400074</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
